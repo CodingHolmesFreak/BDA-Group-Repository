@@ -24,3 +24,18 @@ date_summary = partition_date.filter(df["Release date"] >= "2020").groupBy("Rele
 print("Content by Relase Date ")
 date_summary.show()
 
+#Transformations
+
+#filter publisher
+tencent_date = df.filter(df["Publisher(s)"].contains("Tencent Games"))
+
+print("Tencent Games:")
+tencent_date.select("Game", "Release date", "Player count[a]").show()
+
+#sort release date
+sorted_date = df.orderBy("Release date", ascending=False)
+
+print("Latest Games:")
+sorted_date.select("Game", "Release date", "Publisher(s)").show(10)
+
+spark.stop()
