@@ -22,3 +22,7 @@ tencent_data = df.filter(df["Publisher"].contains("Tencent Games"))
 print("Tencent Games:")
 tencent_data.select()
 
+sorted_date = df.orderBy("Release date", ascending=False)
+
+print("Latest Games:")
+sorted_date.select("Game", "Release date", "Publisher").show(10)
