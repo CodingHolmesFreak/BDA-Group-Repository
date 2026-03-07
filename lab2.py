@@ -8,9 +8,9 @@ df.printSchema()
 
 # Strategy 1: Repartitioning by Publisher
 
-partition_publisher = df.repartition("Publisher")   
+partition_publisher = df.repartition("Publisher(s)")   
 
-publisher_summary = partition_publisher.filter(df["Publisher"]== "Tencent Games")
+publisher_summary = partition_publisher.filter(df["Publisher(s)"]== "Tencent Games")
 
 print("Summary of Tencent Games:")
 publisher_summary.show()
