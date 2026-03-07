@@ -6,3 +6,12 @@ df = spark.read.csv("most_played_mobile_games.csv", header=True, inferSchema=Tru
 
 df.printSchema()
 
+# Strategy 1: Repartitioning by Publisher
+
+partition_publisher = df.repartition("Publisher")   
+
+publisher_summary = partition_publisher.filter(df["Publisher"]== "Tencent Games")
+
+print("Summary of Tencent Games:")
+publisher_summary.show()
+
