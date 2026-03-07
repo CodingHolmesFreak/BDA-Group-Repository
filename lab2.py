@@ -10,7 +10,7 @@ df.printSchema()
 
 partition_publisher = df.repartition("Publisher(s)")   
 
-publisher_summary = partition_publisher.filter(df["Publisher(s)"]== "Tencent Games")
+publisher_summary = partition_publisher.filter(df["Publisher(s)"] == "Tencent Games")
 
 print("Summary of Tencent Games:")
 publisher_summary.show()
