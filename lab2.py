@@ -16,18 +16,6 @@ print("Summary of Tencent Games:")
 publisher_summary.show()
 
 # Strategy 2: Repartitioning by Release Date
-<<<<<<< HEAD
-=======
-
-partition_date = df.repartitionByRange(4, "Release date")
-
-date_summary = partition_date.filter(df["Release date"] >= "2020").groupBy("Release date").count().orderBy("Release date")
-
-print("Content by Release Date:")
-date_summary.show()
-
-#Transformations
->>>>>>> gestiada
 
 partition_date = df.repartitionByRange(4, "Release Date")
 
