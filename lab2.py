@@ -20,7 +20,7 @@ publisher_summary.show()
 tencent_data = df.filter(df["Publisher(s)"].contains("Tencent Games"))
 
 print("Tencent Games:")
-tencent_data.select()
+tencent_data.select("Game", "Release date", "Player count[a]").show(10)
 
 sorted_date = df.orderBy("Release date", ascending=False)
 
