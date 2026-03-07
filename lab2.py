@@ -15,3 +15,12 @@ publisher_summary = partition_publisher.filter(df["Publisher"]== "Tencent Games"
 print("Summary of Tencent Games:")
 publisher_summary.show()
 
+# Strategy 2: Repartitioning by Release Date
+
+partition_date = df.repartitionByRange(4, "Release Date")
+
+date_summary = partition_date.filter(df["Release date"] >= "2020").groupBy("Release date").count().orderBy("Release date")
+
+print("Content by Relase Date ")
+date_summary.show()
+
