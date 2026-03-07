@@ -15,3 +15,10 @@ publisher_summary = partition_publisher.filter(df["Publisher"]== "Tencent Games"
 print("Summary of Tencent Games:")
 publisher_summary.show()
 
+#Transformations
+
+tencent_data = df.filter(df["Publisher"].contains("Tencent Games"))
+
+print("Tencent Games:")
+tencent_data.select()
+
