@@ -76,12 +76,12 @@ plt.show()
 
 df_ocean = pd.DataFrame({
     'Category': categories,
-    'House Count': house_counts
+    'Count': house_counts
 })
 
 df_income = pd.DataFrame({
     'Income': income,
-    'House Value': house_value,
+    'HouseValue': house_value,
     'Population': population
 })
 
@@ -94,3 +94,40 @@ df_release = pd.DataFrame({
     'Year': release_years,
     'Count': release_counts
 })
+
+#7 Bar Plot - Lab 3
+sns.barplot(x='Category', y='Count', data=df_ocean)
+plt.title('Ocean Proximity')
+plt.xticks(rotation=30)
+plt.show()
+
+#8 Regression Plot - Lab 3
+sns.regplot(x='Income', y='HouseValue', data=df_income)
+plt.title('Income vs House Value')
+plt.show()
+
+#9 Box Plot - Lab 3 
+sns.boxplot(y=df_income['Population'])
+plt.title('Population Distribution')
+plt.show()
+
+#10 Heatmap – Lab 3
+sns.heatmap(df_income.corr(), annot=True)
+plt.title('Correlation Heatmap')
+plt.show()
+
+#11 Count Plot – Lab 2
+sns.countplot(x='Year', data=df_release)
+plt.title('Game Release Frequency')
+plt.xticks(rotation=30)
+plt.show()
+
+#12 Seaborn Bar Plot – Lab 1
+sns.barplot(x='Student', y='Grade', data=df_students)
+plt.title('Student Grades')
+plt.show()
+
+#13 Box Plot – Lab 1
+sns.boxplot(y=df_students['Grade'])
+plt.title('Student Grade Distribution')
+plt.show()
