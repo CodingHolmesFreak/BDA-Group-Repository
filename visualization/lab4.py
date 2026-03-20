@@ -48,8 +48,7 @@ plt.show()
 
 # 3. Line Graph – Lab 2
 plt.figure(figsize=(8,5))
-plt.plot(release_years, release_counts, marker='o',
-         color='#4F4F4F', linewidth=2)
+plt.plot(release_years, release_counts, marker='o', color='#4F4F4F', linewidth=2)
 plt.title('Game Releases Over Time', fontsize=14, weight='bold')
 plt.xlabel('Year')
 plt.ylabel('Count')
