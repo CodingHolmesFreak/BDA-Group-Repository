@@ -39,7 +39,7 @@ plt.show()
 
 # 2. Scatter Plot – Lab 3
 plt.figure(figsize=(8,5))
-plt.scatter(income, house_value, color='#2E2E2E', edgecolor='white', s=90)
+plt.scatter(income, house_value, color='#2E2E2E')
 plt.title('Median Income vs House Value', fontsize=14, weight='bold')
 plt.xlabel('Median Income')
 plt.ylabel('House Value')
@@ -59,7 +59,7 @@ plt.show()
 
 # 4. Histogram – Lab 3
 plt.figure(figsize=(8,5))
-plt.hist(population, bins=5, color=dark_palette, edgecolor='white')
+plt.hist(population, bins=5, color='#6E6E6E', edgecolor='white')
 plt.title('Population Distribution', fontsize=14, weight='bold')
 plt.xlabel('Population')
 plt.ylabel('Frequency')
@@ -102,9 +102,8 @@ plt.show()
 
 # 8. Regression Plot – Lab 3
 plt.figure(figsize=(8,5))
-sns.regplot(data=df_income, x='Income', y='HouseValue',
-            scatter_kws={'color':'#2E2E2E', 's':90},
-            line_kws={'color':'#D3D3D3'})
+sns.regplot(data=df_income, x='Income', y='HouseValue', scatter_kws={'color':'#2E2E2E', 's':90},
+line_kws={'color':'#D3D3D3'})
 plt.title('Income vs House Value (Regression)', fontsize=14, weight='bold')
 plt.tight_layout()
 plt.show()
@@ -118,16 +117,14 @@ plt.show()
 
 # 10. Heatmap – Lab 3
 plt.figure(figsize=(6,5))
-sns.heatmap(df_income.corr(), annot=True,
-            cmap='Greys', linewidths=0.5)
+sns.heatmap(df_income.corr(), annot=True,cmap='Greys', linewidths=0.5)
 plt.title('Correlation Heatmap', fontsize=14, weight='bold')
 plt.tight_layout()
 plt.show()
 
 # 11. Count Plot – Lab 2
 plt.figure(figsize=(8,5))
-sns.countplot(data=df_release, x='Year',
-              palette=dark_palette)
+sns.countplot(data=df_release, x='Year', palette=dark_palette)
 plt.title('Game Release Frequency', fontsize=14, weight='bold')
 plt.xticks(rotation=25)
 plt.tight_layout()
@@ -135,8 +132,7 @@ plt.show()
 
 # 12. Seaborn Bar Plot – Lab 1
 plt.figure(figsize=(6,4))
-sns.barplot(data=df_students, x='Student', y='Grade',
-            palette=['#5A5A5A','#7A7A7A','#9A9A9A'])
+sns.barplot(data=df_students, x='Student', y='Grade', palette=['#5A5A5A','#7A7A7A','#9A9A9A'])
 plt.title('Student Grades', fontsize=14, weight='bold')
 plt.tight_layout()
 plt.show()
