@@ -23,6 +23,8 @@ income = [8.3252, 8.3014, 7.2574, 5.6431, 6.1183]
 house_value = [452600, 358500, 352100, 341300, 75000]
 population = [322, 2401, 496, 558, 86]
 
+#MATPLOTLIB VISUALIZATIONS
+
 #1 BAR CHART - LAB 3
 plt.figure()
 plt.bar(categories, house_counts)
@@ -54,3 +56,21 @@ plt.title("Population Distribution")
 plt.xlabel("Population")          
 plt.ylabel("Frequency")
 plt.show()
+
+#5 Pie Chart - Lab 2
+plt.figure()
+plt.pie(players, labels=games, autopct='%1.1f%%')
+plt.title('Tencent Game Player Distribution')
+plt.show()
+
+#6 Bar Chart - Lab 1
+plt.figure()
+plt.bar(students, grades)
+plt.title("Student Average Grades (>=80)")
+plt.xlabel("Student")
+plt.ylabel("Average Grade")
+plt.ylim(80, 90)
+plt.show()
+
+#SEABORN VISUALIZATIONS
+
