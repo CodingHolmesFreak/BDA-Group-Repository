@@ -23,13 +23,13 @@ release_counts = [1,1,3,2,3,4,1]
 students = ['Alice', 'Bob', 'Charlie']
 grades = [87.5, 88.5, 87.0]
 
-dark_palette = ['#2E2E2E', '#4F4F4F', '#6E6E6E', '#8E8E8E', '#B0B0B0']
+blue_palette = ['#27374D', '#526D82', '#9DB2BF', '#DDE6ED']
 
 # MATPLOTLIB VISUALIZATIONS
 
 # 1. Bar Chart – Lab 3
 plt.figure(figsize=(8,5))
-plt.bar(categories, house_counts, color=dark_palette)
+plt.bar(categories, house_counts, color=blue_palette)
 plt.title('Ocean Proximity Distribution', fontsize=14, weight='bold')
 plt.xlabel('Category')
 plt.ylabel('Number of Houses')
@@ -39,7 +39,7 @@ plt.show()
 
 # 2. Scatter Plot – Lab 3
 plt.figure(figsize=(8,5))
-plt.scatter(income, house_value, color='#2E2E2E')
+plt.scatter(income, house_value, color='#526D82')
 plt.title('Median Income vs House Value', fontsize=14, weight='bold')
 plt.xlabel('Median Income')
 plt.ylabel('House Value')
@@ -48,7 +48,7 @@ plt.show()
 
 # 3. Line Graph – Lab 2
 plt.figure(figsize=(8,5))
-plt.plot(release_years, release_counts, marker='o', color='#4F4F4F', linewidth=2)
+plt.plot(release_years, release_counts, marker='o', color='#526D82', linewidth=2)
 plt.title('Game Releases Over Time', fontsize=14, weight='bold')
 plt.xlabel('Year')
 plt.ylabel('Count')
@@ -58,7 +58,7 @@ plt.show()
 
 # 4. Histogram – Lab 3
 plt.figure(figsize=(8,5))
-plt.hist(population, bins=5, color='#6E6E6E', edgecolor='white')
+plt.hist(population, bins=5, color='#9DB2BF', edgecolor='white')
 plt.title('Population Distribution', fontsize=14, weight='bold')
 plt.xlabel('Population')
 plt.ylabel('Frequency')
@@ -67,14 +67,14 @@ plt.show()
 
 # 5. Pie Chart – Lab 2
 plt.figure(figsize=(6,6))
-plt.pie(players, labels=games, autopct='%1.1f%%', colors=dark_palette)
+plt.pie(players, labels=games, autopct='%1.1f%%', colors=blue_palette)
 plt.title('Tencent Game Player Distribution', fontsize=14, weight='bold')
 plt.tight_layout()
 plt.show()
 
 # 6. Bar Chart – Lab 1
 plt.figure(figsize=(6,4))
-plt.bar(students, grades, color=['#5A5A5A','#7A7A7A','#9A9A9A'])
+plt.bar(students, grades, color=blue_palette)
 plt.title('Student Average Grades (>=80)', fontsize=14, weight='bold')
 plt.xlabel('Students')
 plt.ylabel('Average Grade')
@@ -93,37 +93,37 @@ df_release = pd.DataFrame({'Year': release_years, 'Count': release_counts})
 
 # 7. Seaborn Bar Plot – Lab 3
 plt.figure(figsize=(8,5))
-sns.barplot(data=df_ocean, x='Category', y='Count', palette=dark_palette)
-plt.title('Ocean Proximity Distribution (Seaborn)', fontsize=14, weight='bold')
+sns.barplot(data=df_ocean, x='Category', y='Count', palette=blue_palette)
+plt.title('Ocean Proximity Distribution', fontsize=14, weight='bold')
 plt.xticks(rotation=25)
 plt.tight_layout()
 plt.show()
 
 # 8. Regression Plot – Lab 3
 plt.figure(figsize=(8,5))
-sns.regplot(data=df_income, x='Income', y='HouseValue', scatter_kws={'color':'#2E2E2E', 's':90},
-line_kws={'color':'#D3D3D3'})
-plt.title('Income vs House Value (Regression)', fontsize=14, weight='bold')
+sns.regplot(data=df_income, x='Income', y='HouseValue', scatter_kws={'color':'#526D82', 's':90},
+line_kws={'color':'#27374D'})
+plt.title('Income vs House Value', fontsize=14, weight='bold')
 plt.tight_layout()
 plt.show()
 
 # 9. Box Plot – Lab 3
 plt.figure(figsize=(6,4))
-sns.boxplot(y=df_income['Population'], color='#7A7A7A')
+sns.boxplot(y=df_income['Population'], color='#526D82')
 plt.title('Population Distribution', fontsize=14, weight='bold')
 plt.tight_layout()
 plt.show()
 
 # 10. Heatmap – Lab 3
 plt.figure(figsize=(6,5))
-sns.heatmap(df_income.corr(), annot=True,cmap='Greys', linewidths=0.5)
+sns.heatmap(df_income.corr(), annot=True, cmap=blue_palette, linewidths=0.5)
 plt.title('Correlation Heatmap', fontsize=14, weight='bold')
 plt.tight_layout()
 plt.show()
 
 # 11. Count Plot – Lab 2
 plt.figure(figsize=(8,5))
-sns.countplot(data=df_release, x='Year', palette=dark_palette)
+sns.countplot(data=df_release, x='Year', palette=blue_palette)
 plt.title('Game Release Frequency', fontsize=14, weight='bold')
 plt.xticks(rotation=25)
 plt.tight_layout()
@@ -131,14 +131,15 @@ plt.show()
 
 # 12. Seaborn Bar Plot – Lab 1
 plt.figure(figsize=(6,4))
-sns.barplot(data=df_students, x='Student', y='Grade', palette=['#5A5A5A','#7A7A7A','#9A9A9A'])
+sns.barplot(data=df_students, x='Student', y='Grade', palette=blue_palette)
 plt.title('Student Grades', fontsize=14, weight='bold')
 plt.tight_layout()
 plt.show()
 
 # 13. Box Plot – Lab 1
 plt.figure(figsize=(6,4))
-sns.boxplot(y=df_students['Grade'], color='#8A8A8A')
+blue_palette = ['#27374D', '#526D82', '#9DB2BF', '#DDE6ED']
+sns.boxplot(y=df_students['Grade'], color=blue_palette[0])
 plt.title('Student Grade Distribution', fontsize=14, weight='bold')
 plt.tight_layout()
 plt.show()
