@@ -74,3 +74,23 @@ plt.show()
 
 #SEABORN VISUALIZATIONS
 
+df_ocean = pd.DataFrame({
+    'Category': categories,
+    'House Count': house_counts
+})
+
+df_income = pd.DataFrame({
+    'Income': income,
+    'House Value': house_value,
+    'Population': population
+})
+
+df_students = pd.DataFrame({
+    'Student': students,
+    'Grade': grades
+})
+
+df_release = pd.DataFrame({
+    'Year': release_years,
+    'Count': release_counts
+})
