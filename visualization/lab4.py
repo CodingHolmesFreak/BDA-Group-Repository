@@ -49,7 +49,7 @@ plt.show()
 # 3. Line Graph – Lab 2
 plt.figure(figsize=(8,5))
 plt.plot(release_years, release_counts, marker='o',
-         color='#D3D3D3', linewidth=2)
+         color='#4F4F4F', linewidth=2)
 plt.title('Game Releases Over Time', fontsize=14, weight='bold')
 plt.xlabel('Year')
 plt.ylabel('Count')
@@ -59,7 +59,7 @@ plt.show()
 
 # 4. Histogram – Lab 3
 plt.figure(figsize=(8,5))
-plt.hist(population, bins=5, color='#6E6E6E', edgecolor='white')
+plt.hist(population, bins=5, color=dark_palette, edgecolor='white')
 plt.title('Population Distribution', fontsize=14, weight='bold')
 plt.xlabel('Population')
 plt.ylabel('Frequency')
@@ -68,8 +68,7 @@ plt.show()
 
 # 5. Pie Chart – Lab 2
 plt.figure(figsize=(6,6))
-plt.pie(players, labels=games, autopct='%1.1f%%',
-        colors=dark_palette)
+plt.pie(players, labels=games, autopct='%1.1f%%', colors=dark_palette)
 plt.title('Tencent Game Player Distribution', fontsize=14, weight='bold')
 plt.tight_layout()
 plt.show()
