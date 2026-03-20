@@ -2,6 +2,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 
+plt.style.use('dark_background')
+sns.set_theme(style='darkgrid', context='notebook')
+
 #Datasets
 
 #lab 1 dataset
